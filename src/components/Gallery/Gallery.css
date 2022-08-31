@@ -1,0 +1,118 @@
+.gallery {
+    flex-direction: row;
+    background:transparent;
+    padding: 1em;
+}
+.gallery-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    height: 100%;
+    position: relative; 
+    border-radius: 2px;   
+}
+.gallery-images img {
+   border-radius: 2px;   
+}
+.gallery-images-container {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+.gallery-images-container::-webkit-scrollbar {
+    display: none;
+}
+.gallery-images-card {
+    position: relative;
+    min-width: 300px;
+    height: 447px;
+    margin: 0 3em ;
+    box-shadow: 2px 4px 8px var(--color-gray);
+}
+
+.gallery__image-icon {
+    position: absolute;
+    color: var(--color-secondary);
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 2;   
+}
+.gallery-images-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease;
+    border: .5px solid rgba(255, 255, 255, .2);
+}
+.gallery-images-card:hover img {
+    opacity: .35; 
+}
+.gallery-images-card:hover .gallery-image-icon {
+    opacity: 1;
+}
+.gallery-images-arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 10%;
+    background: url("../../assets/bg8.jpg");
+}
+.gallery-arrow-icon {
+    color: var(--color-secondary);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.gallery-arrow-icon:hover {
+    color: var(--color-white);
+}
+
+@media screen and (min-width: 2000px) {
+    .gallery-content button {
+        margin-top: 2rem;
+    }
+
+    .gallery-content {
+        min-width: 1000px;
+        padding-right: 4rem;
+    }
+
+    .gallery-images-card {
+        min-width: 400px;
+        height: 547px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery-images {
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    .gallery {
+        padding: 2rem 0 2rem 2rem;
+    }
+}
+@media screen and (max-width: 650px) {
+    .gallery {
+        padding: 2rem 0 2rem 2rem;
+    }   
+    .gallery-content {
+        min-width: 100%;
+    }
+    .gallery-images-card {
+        min-width: 240px;
+        height: 320px;
+    }
+}

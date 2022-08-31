@@ -1,0 +1,19 @@
+.scroll{
+    background: var(--color-isabelline);
+    height: 10vh;   
+}
+.scroll button {
+    background-color: var(--color-smallow);
+    width: 40px;
+    height: 40px; 
+    margin-left: 85%;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-smallow);
+    box-shadow:5px 5px 10px rgba(0,0,0, .6); 
+}
+.scroll button .icon {
+      font-size: 25px;
+      color: var(--color-gray);
+      cursor: pointer;
+}

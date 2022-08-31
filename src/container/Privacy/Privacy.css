@@ -1,0 +1,12 @@
+.mainContainer {
+  height: 100%;
+  background: transparent;
+  padding: 2em;
+}
+.mainContainer h3{
+  font-family: Quicksand;
+  font-size: large;
+  color: var(--color-secondary);
+  padding: .5em;
+  padding-top: 3em;
+}

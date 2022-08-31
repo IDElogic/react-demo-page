@@ -1,0 +1,116 @@
+.mainInfo {
+    margin:0;
+    height: 60vh;
+    background: url("../../assets/bg8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    position: relative;
+    overflow: hidden;    
+}
+.mainInfo h1 {
+    position: absolute;
+    font-size: clamp(2.5rem, 10vw + 1rem, 8rem);
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    font-family: Impact,'Arial Narrow Bold', sans-serif;
+    transform:translateY(-50%);
+    opacity: 0;
+}
+.mainInfo-glass {
+   position: absolute; 
+   width: 62%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: rgba(248, 248, 255, 0.45);
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter:blur(5px);
+   border: 1px solid rgba(255, 255, 255, 0.01);
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   border-bottom-right-radius: 90%;
+   border-top-right-radius: 10%;
+}
+.mainInfo-h1-glass {
+    background: url("../../assets/bg.jpg")
+    center no-repeat fixed;
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    top: 20%;
+    right: 0;
+    animation: text1 0.8s ease-in forwards;
+}
+.mainInfo-h1-regular {
+    color: var(--color-alice-blue);
+    top: 40%;
+    left: 60%;
+    animation: text2 0.8s ease-in forwards ;
+    animation-delay: 500ms;
+}
+.mainInfo-glass > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1.5em;
+}
+.mainInfo-glass > div div {
+    margin: 0 1em;
+}
+
+.mainInfo-glass .fa-route {
+    color: var(--color-alice-blue);
+}
+@keyframes text1 {
+    0%{
+        opacity: 0;
+        transform: translate(-2em,-50%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes text2 {
+    0%{
+        opacity: 0;
+        transform: translate(-2em,-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0,-50%);
+    }
+}
+@media screen and (max-with: 750px) {
+    .mainInfo-glass {
+        width: 90%;
+        height: initial;
+        min-height: 30em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .mainInfo-h1-glass {
+        right: 74%;
+        top: 10%;
+        color: #1f1f1f;
+        background-attachment:initial ;
+        background-size: 100% 130%;
+    }
+    .mainInfo-h1-regular {
+        top: 30%;
+    }
+    .mainInfo-glass > div {
+        margin-top: 4em;
+    }   
+}
+@media screen and (max-height:500px){
+   .mainInfo-glass > div div:nth-child(1) {
+    display: none;
+   }
+}

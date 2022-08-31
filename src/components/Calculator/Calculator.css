@@ -1,0 +1,160 @@
+.calculator-container {
+    min-height: 100vh;
+    background: url("../../assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+.text-container {
+    width: 354px;
+    margin-bottom: 2em;
+    padding: 2em;
+    border-radius: 10px;
+    background: rgba(255, 127, 80, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px);
+    border: 2px solid var(--color-smallow);   
+}
+.text-container h2{
+    font-family: Impact;
+    letter-spacing: .1em;
+    font-size:.1.8em;
+    text-align: center;
+    color: var(--color-alice-blue);     
+}
+.text-container p {
+    font-family:'Quicksand';
+    letter-spacing: .1em;
+    font-size:.1.8em;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 1em;
+    color: var(--color-alice-blue);     
+}
+
+.calculator-grid {
+    display: grid;
+    background: #fff;
+    position: relative;
+    width: 356px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(2,0,3, .6),
+    -15px -15px 20px var(--color-isabelline);
+    position: relative;
+
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.calculator-grid .output {
+   position: relative;
+   grid-column: 1 / -1; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   justify-content: space-around;
+   user-select: none;
+   overflow: none;
+   width: 100%;
+   text-align: end;
+   height: 100px;
+   line-height: 20px;
+   box-shadow: inset 5px 5px 10px rgba(0,0,0, .1);
+   inset: -5px -5px 20px var(--color-alice-blue);
+   border-radius: 10px;
+   margin-bottom: 16px;
+   padding: .75rem;
+   word-wrap: break-word;
+   word-break: break-all;   
+}
+.calculator-grid .output .previous-operand{
+   padding: 0 20px;
+   font-size: 1em;
+   font-weight: 500;
+   color: var(--color-gray);
+  
+}
+.calculator-grid .output .current-operand{
+   font-size: 2em;
+   font-weight: 500;  
+}
+.calculator-grid  button {
+    position: relative;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .1),
+    -5px -5px 20px var(--color-alice-blue);
+    margin: 8px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--color-gray) ;
+    border: 2px solid var(--color-alice-blue);
+    box-shadow: 5px 5px 10px rgba(0,0,0, .1),
+    -5px -5px 10px var(--color-alice-blue);
+    border-radius: 10px;
+}
+.calculator-grid  button:active{
+    box-shadow:inset 5px 5px 10px rgba(0,0,0, .1),
+    inset -5px -5px 10px var(--color-alice-blue);
+    color: var(--color-smallow);
+}
+.calculator-grid .span-two{
+   grid-column: span 2; 
+   background: var(--color-smallow);
+   color: var(--color-alice-blue);
+   border: 2px solid transparent;
+}
+.calculator-grid .clear{
+   grid-column: span 2; 
+   background: var(--color-secondary);
+   color: var(--color-alice-blue);
+   border: 2px solid transparent;
+}
+.calculator-grid .button-plus{
+   grid-row: span 2; 
+   background: var(--color-gray);
+   color: var(--color-alice-blue);
+   border: 2px solid #fff;
+}
+.calculator-grid .button-equal{
+   grid-row: span 2; 
+   background: var(--color-gray);
+   color: var(--color-alice-blue);
+   border: 2px solid transparent;
+}
+.calculator-grid .buttons button#equal:active,
+.calculator-grid .buttons button#plus:active,
+.calculator-grid .buttons button#clear:active {
+   box-shadow: 5px 5px 10px rgba(0,0,0, .1),
+   -5px -5px 10px #fff,
+   inset 5px 5px 10px rgba(0,0,0, .1);
+}
+.backBtn {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: var(--color-smallow);
+    top: 25px;
+    right: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--color-smallow);
+    box-shadow:5px 5px 10px rgba(0,0,0, .1),
+    -5px -5px 10px rgba(247, 239, 236, 0.65);
+    cursor: pointer;
+}
+

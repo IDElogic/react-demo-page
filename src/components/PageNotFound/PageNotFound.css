@@ -1,0 +1,64 @@
+.container{
+    margin: 0 auto;
+    background: url("../../assets/bg8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+.content h2 {
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family:'Quicksand', sans-serif;
+    color: var(--color-secondary);
+}
+.button-container{
+    padding: 5em 2em 0em 2em;
+}
+.loading-button {
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color-alice-blue);
+    letter-spacing: .2em;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2em 3em;
+    margin-bottom: 2em;
+    background-color: var(--color-secondary);
+    position: relative ;
+    overflow: hidden;
+}
+.loading-bar {
+    position: absolute ;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: #fff; 
+    opacity: 10%;
+    transition: all 1s linear;
+}
+
+.loading-button2 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color-alice-blue);
+    letter-spacing: .18em;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    padding: .5em 1em ;
+    margin-bottom: 1em;
+    background-color: transparent;
+    position: relative ;
+    overflow: hidden;
+}
+.loading-bar2 {
+    background-color: transparent; 
+}

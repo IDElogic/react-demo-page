@@ -1,0 +1,53 @@
+.infoStrip {
+    background: url("../../assets/bg8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.infoStrip-glass-container {
+    position:relative; 
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+    
+ }
+.infoStrip .infoStrip-h1 {
+    font-family:'Gill Sans', Calibri, sans-serif;
+    color: var(--color-alice-blue);
+    padding: 0 1em 1rem 1em ; 
+    margin: 0 .5em;
+    text-transform: uppercase;
+    text-align:center;
+    font-size: 2em;
+    letter-spacing: 0.09em;
+}
+.infoStrip .infoStrip-h2 {
+    font-family:'Gill Sans',Calibri, sans-serif;
+    color:var(--color-secondary);
+    font-weight: 300;
+    letter-spacing: 0.09em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    font-size: 2em;
+    text-align:right; 
+    width: 100%;
+    padding: 1.1em 2em;
+    text-transform: uppercase;
+}
+.infoStrip-contact{
+    font-family: var(--font-base);
+    color: var(--color-alice-blue);
+    padding: 0em; 
+    text-align: center;
+    
+}
